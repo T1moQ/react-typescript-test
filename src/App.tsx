@@ -5,6 +5,7 @@ import List from "./components/List"
 import { ITodo, IUser } from "../types/types"
 import axios from "axios"
 import UserItem from "./components/UserItem"
+import TodoItem from "./components/TodoItem"
 
 const App = () => {
   const [users, setUsers] = useState<IUser[]>([])
@@ -42,6 +43,8 @@ const App = () => {
         <button>Button</button>
       </Card>
       <List items={users} renderItem={(user: IUser) => <UserItem user={user} key={user.id} />} />
+
+      <List items={todo} renderItem={(todo: ITodo) => <TodoItem todo={todo} key={todo.id} />} />
     </div>
   )
 }
