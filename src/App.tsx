@@ -6,6 +6,7 @@ import { ITodo, IUser } from "../types/types"
 import axios from "axios"
 import UserItem from "./components/UserItem"
 import TodoItem from "./components/TodoItem"
+import EventExamples from "./components/EventExamples"
 
 const App = () => {
   const [users, setUsers] = useState<IUser[]>([])
@@ -39,6 +40,7 @@ const App = () => {
       <h1>
         TypeScript Test
       </h1>
+      <EventExamples />
       <Card onClick={(num) => console.log('click', num)} variant={CardVariant.primary} width="200px" height="200px">
         <button>Button</button>
       </Card>
