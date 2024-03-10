@@ -4,7 +4,6 @@ import './App.css'
 import List from "./components/List"
 import { ITodo, IUser } from "../types/types"
 import axios from "axios"
-import UserItem from "./components/UserItem"
 import TodoItem from "./components/TodoItem"
 import EventExamples from "./components/EventExamples"
 
@@ -44,8 +43,6 @@ const App = () => {
       <Card onClick={(num) => console.log('click', num)} variant={CardVariant.primary} width="200px" height="200px">
         <button>Button</button>
       </Card>
-      <List items={users} renderItem={(user: IUser) => <UserItem user={user} key={user.id} />} />
-
       <List items={todo} renderItem={(todo: ITodo) => <TodoItem todo={todo} key={todo.id} />} />
     </div>
   )
